@@ -1,0 +1,83 @@
+footer {
+    bottom: 0;
+    height: 94px;
+    width: 100%;
+}
+
+footer .default {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer .default .section-title, 
+footer .default .section-desc {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+footer .default .section-title {
+    font-size: 20px;
+}
+
+footer .default .section-desc {
+    font-size: 12px;
+    color: #aeaeae;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+ footer .default .section-body {
+    max-width: 1140px;
+    margin: auto;
+}
+
+footer .default .light {
+    background-color: #ededed;
+}
+
+footer .default.light .section-title, 
+footer .default.light .section-body {
+    color: black;
+}
+
+footer .default .dark {
+    background-color: #000;
+}
+
+footer .default.dark .section-title,
+footer .default.dark .section-body {
+    color: white;
+}
+
+.body-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer p {
+    font-family: monserrat, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #B28756;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    height: 30px;
+    width: 30px;
+}
+
+footer img {
+    height: 30px;
+    width: 30px;
+}
+
+footer img:hover {
+    cursor: pointer;
+}

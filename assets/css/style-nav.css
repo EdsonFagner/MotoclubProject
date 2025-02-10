@@ -1,0 +1,142 @@
+ol, ul{
+    padding: 0;
+}
+
+header {
+    height: 100px;
+    background-color: black; 
+}
+
+.header {
+    max-width: 1140px;
+    height: 100px;
+    /*Automaticamente vai para o meio da tela*/
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul,
+.menu li {
+    list-style: none;
+
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li a {
+    color: #B28756;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid black;
+}
+
+.menu li a:hover, .menu .active a {
+    border-bottom: 5px solid #B28756;
+    color: #CCC;
+}
+
+/*Se a largura for no máximo 630px aplica as configurações*/
+@media (max-width: 630px){
+    header {
+        height: 100px;
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    ul li {
+        width: 50%;
+    }
+
+    nav li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li a {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .menu li.active a {
+        border: 0;
+        color: #B28756;
+    }
+}
+
+/*Se a largura for no máximo 420px aplica as configurações*/
+@media (max-width: 420px){
+    header {
+        height: 100px;
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    ul li {
+        width: 50%;
+    }
+
+    li a {
+        font-size: 8px;
+    }
+
+    .menu li.active a {
+        border: 0;
+        color: #B28756;
+    }
+}
+
+/*Se a largura for no máximo 355px aplica as configurações*/
+@media (max-width: 355px){
+    li a {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+}
