@@ -19,25 +19,59 @@ header {
 .menu {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    flex: 1;
+    display: flex;
+    width: 100%;
+}
+
+.menu nav {
+    width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
 }
 
 .menu ul,
 .menu li {
     list-style: none;
-
 }
 
 .menu ul {
     display: flex;
 }
 
+.firistUl {
+    display: flex;
+    align-items: center;
+}
+
+.firistUl img {
+    width: 80px;
+    height: 80px;
+}
+
+.secondUl {
+    width: 100%;
+}
+
+.thirdUl {
+    justify-content: flex-end !important;
+    padding-right: 30px;
+}
+
 .menu li a {
-    color: #B28756;
+    color: Crimson;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bolder;
     display: block;
     height: 100px;
     padding-left: 10px;
@@ -45,11 +79,20 @@ header {
     display: flex;
     align-items: center;
     border-bottom: 5px solid black;
+    font-style: italic;
 }
 
 .menu li a:hover, .menu .active a {
-    border-bottom: 5px solid #B28756;
+    border-bottom: 5px solid Crimson;
     color: #CCC;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    border-radius: none;
+    font-family: "Chivo", serif !important;
+    font-weight: 300 !important;
 }
 
 /*Se a largura for no máximo 630px aplica as configurações*/
@@ -92,7 +135,7 @@ header {
 
     .menu li.active a {
         border: 0;
-        color: #B28756;
+        color: Crimson;
     }
 }
 
@@ -129,7 +172,7 @@ header {
 
     .menu li.active a {
         border: 0;
-        color: #B28756;
+        color: Crimson;
     }
 }
 

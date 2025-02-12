@@ -4,3 +4,134 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 13px;
+    overflow-x: hidden;
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    background-color: black;
+}
+
+.banner {
+    height: calc(100vh - 100px);
+    background-color: black;
+    background-image: url('../images/group01.jpg');
+    background-size: contain;
+    background-position: bottom;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.banner .sliders {
+    height: 100%;
+    width: 1000vw;
+}
+
+.banner .slide {
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*Modal Styles **************************************************************************************************/
+
+.modal-header {
+    background-color: #000;
+    border: 1px solid crimson;
+    border-bottom: 0;
+    cursor: default;
+    padding-left: 30% !important;
+}
+
+.modal-header h5 {
+    color: white;
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+}
+ 
+.modal-body {
+    background-color: #000;
+    border: 1px solid crimson;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px !important;
+    border: 0;
+    border-bottom: 1px solid crimson;
+    background-color: #000;
+    padding-bottom: 5px;
+    font-weight: 500;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.login::placeholder {
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    color: white;
+    font-weight: 300;
+}
+
+.password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px !important;
+    border: 0;
+    border-bottom: 1px solid crimson;
+    background-color: #000;
+    padding-bottom: 5px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.password::placeholder {
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    color: white;
+    font-weight: 300;
+}
+
+.login:focus {
+   outline: none;
+}
+
+.password:focus {
+   outline: none;
+}
+
+label {
+    color: black;
+}
+
+.buttonAlign {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-body input {
+    width: 120px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.forgetPassword {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    font-weight: 300;
+    font-style: italic;
+}
+

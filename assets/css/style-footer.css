@@ -2,6 +2,7 @@ footer {
     bottom: 0;
     height: 94px;
     width: 100%;
+    padding-top: 10px;
 }
 
 footer .default {
@@ -58,12 +59,12 @@ footer .default.dark .section-body {
 }
 
 footer p {
-    font-family: monserrat, sans-serif;
+    font-family: "Chivo", serif;
     font-size: 12px;
     font-style: italic;
     font-weight: bolder;
     text-transform: uppercase;
-    color: #B28756;
+    color: crimson;
     margin-right: 20px;
     margin-bottom: 10px;
 }
