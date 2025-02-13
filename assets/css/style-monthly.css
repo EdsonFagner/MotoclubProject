@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+li button {
+    display: none !important;
+}
+
+body {
+    font-size: 13px;
+    overflow-x: hidden;
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    background-color: black;
+}
+
+.logout a {
+    margin: 10px;
+}
+
+#buttonLogout {
+    margin-right: 30px;
+}
+
+.section-title h1 {
+    color: white;
+    font-style: italic;
+}
+
+.section-body table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    margin-bottom: 100px;
+}
+
+.section-body table th, td {
+    font-family: "Chivo", serif;
+    text-align: center;
+    color: white;
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+    width: 200px;
+
+}
+
+.buttonExclude {
+    display: flex !important;
+    align-items: center !important;
+    width: 85px !important;
+    height: 30px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+}

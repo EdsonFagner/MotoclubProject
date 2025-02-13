@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+li button {
+    display: none !important;
+}
+
+body {
+    font-size: 13px;
+    overflow-x: hidden;
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    background-color: black;
+}
+
+.logout a {
+    margin: 10px;
+}
+
+#buttonLogout {
+    margin-right: 30px;
+}
+
+.section-title h1 {
+    color: white;
+    font-style: italic;
+}
+
+.inputName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px !important;
+    border: 0;
+    border-bottom: 1px solid crimson;
+    background-color: #000;
+    padding-bottom: 5px;
+    font-weight: 500;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.inputName::placeholder {
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.inputName:focus {
+    outline: none;
+}
+
+.alignButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.alignButton button {
+    width: auto;
+}

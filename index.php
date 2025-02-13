@@ -30,7 +30,7 @@
                     <form action="login_press.php" method="post" name="formLogin">
                         <div class="modal-body d-flex justify-content-center flex-column">
                             <label class="lb-login d-flex justify-content-center" for="login">
-                                <input class="login" type="text" name="user" placeholder="USUÁRIO" required><br>
+                                <input class="login" type="text" name="login" placeholder="USUÁRIO" required><br>
                             </label>
                             <label class="lb-password d-flex justify-content-center" for="password">
                                 <input class="password" type="password" name="password" placeholder="SENHA" required>
@@ -42,6 +42,7 @@
                             <br><br>
                             <div class="forgetPassword">
                                 <a href="#">Esqueceu a senha?</a>
+                                <a href="#">Cadastrar-se?</a>
                             </div>
                         </div>
                     </form>
