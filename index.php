@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if(!empty($_SESSION['login'])){
+   echo "<script type='module'>document.querySelector('.buttonLoginNav').style.display = 'none';</script>";
+   echo "<script type='module'>document.querySelector('#monthlyLink').style.display = 'flex';</script>";
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +54,7 @@
                             <br><br>
                             <div class="forgetPassword">
                                 <a href="#">Esqueceu a senha?</a>
-                                <a href="#">Cadastrar-se?</a>
+                                <a href="register.php">Cadastrar-se?</a>
                             </div>
                         </div>
                     </form>

@@ -20,36 +20,12 @@ body {
     background-color: black;
 }
 
-.logout a {
-    margin: 10px;
-}
-
-#buttonLogout {
-    margin-right: 30px;
-}
-
 .section-title h1 {
-    color: white;
     font-style: italic;
-}
-
-.inputName {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px !important;
-    border: 0;
-    border-bottom: 1px solid green;
-    background-color: #000;
-    padding-bottom: 5px;
-    font-weight: 500;
     color: white;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
 }
 
-.inputName2 {
+.code {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,62 +41,105 @@ body {
     text-align: center;
 }
 
-.inputName::placeholder {
+.code::placeholder {
     font-family: "Chivo", serif;
     font-optical-sizing: auto;
     font-style: italic;
     color: white;
     font-weight: 300;
-    text-transform: uppercase;
     text-align: center;
 }
 
-.inputName2::placeholder {
-    font-family: "Chivo", serif;
-    font-optical-sizing: auto;
-    font-style: italic;
-    color: white;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-align: center;
+.code:focus {
+   outline: none;
 }
 
-.inputName:focus {
-    outline: none;
-}
-
-.inputName2:focus {
-    outline: none;
-}
-
-.alignButton {
+.user {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 200px !important;
+    border: 0;
+    border-bottom: 1px solid crimson;
+    background-color: #000;
+    padding-bottom: 5px;
+    font-weight: 500;
+    color: white;
     margin-bottom: 50px;
+    text-align: center;
 }
 
-.alignButton button {
-    width: auto;
-}
-
-#codeForm {
-    border: 1px solid green;
-    min-width: 400px;
-    margin-bottom: 30px;
-}
-
-#codeForm2 {
-    border: 1px solid crimson;
-    min-width: 400px;
-    margin-bottom: 30px;
-}
-
-#codeForm .spanText {
-    margin-top: 30px;
+.user::placeholder {
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
     color: white;
+    font-weight: 300;
+    text-align: center;
 }
 
-#codeForm2 .spanText2 {
-    margin-top: 30px;
+.user:focus {
+   outline: none;
+}
+
+.password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px !important;
+    border: 0;
+    border-bottom: 1px solid crimson;
+    background-color: #000;
+    padding-bottom: 5px;
+    font-weight: 500;
     color: white;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.password::placeholder {
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+
+.password:focus {
+   outline: none;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px !important;
+    border: 0;
+    border-bottom: 1px solid crimson;
+    background-color: #000;
+    padding-bottom: 5px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.email::placeholder {
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+
+.email:focus {
+   outline: none;
+}
+
+.buttonAlign {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
 }

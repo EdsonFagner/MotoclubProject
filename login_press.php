@@ -25,6 +25,7 @@ if(!empty($_POST['login']) && !empty($_POST['password'])){
     $password = htmlspecialchars($_POST['password']);
     $countIncorrectLogin = null;
 
+
     for ($x = 0; $x < count($consultAllResult); $x++){
         if($login == password_verify($login, $consultAllResult[0][1]) && $password == password_verify($password, $consultAllResult[0][2])){
             $_SESSION['login'] = $login;

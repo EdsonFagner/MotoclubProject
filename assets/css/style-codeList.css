@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100vh;
+}
+
 ul, ol {
     padding: 0;
 }
@@ -18,6 +22,7 @@ body {
     font-family: "Chivo", serif;
     font-optical-sizing: auto;
     background-color: black;
+    height: 100vh;
 }
 
 .logout a {
@@ -49,4 +54,14 @@ body {
     padding: 8px 10px;
     width: 200px;
 
+}
+
+.buttonExclude {
+    display: flex !important;
+    align-items: center !important;
+    width: 85px !important;
+    height: 30px !important;
+    margin-right: 10px;
+    margin-left: 10px;
+    
 }

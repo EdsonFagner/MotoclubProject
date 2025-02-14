@@ -10,9 +10,10 @@
 <li><a href="index.php" class="linkIni">Eventos</a></li>
 <li><a href="index.php" class="linkIni">Galeria</a></li>
 <li><a href="index.php" class="linkIni">Produtos</a></li>
+<li><a href="monthly.php" class="linkIni" id="monthlyLink" style="display: none;">Mensalidades</a></li>
 </ul>
 <ul class="thirdUl">
-<li><button class="btn btn-danger flex-end" data-bs-toggle="modal" data-bs-target="#modalPost">Login</button></li>
+<li><button class="btn btn-danger flex-end buttonLoginNav" data-bs-toggle="modal" data-bs-target="#modalPost">Login</button></li>
 </ul>
 </nav>
 </div>
