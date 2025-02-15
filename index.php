@@ -53,7 +53,7 @@ if(!empty($_SESSION['login'])){
                             </div>
                             <br><br>
                             <div class="forgetPassword">
-                                <a href="#">Esqueceu a senha?</a>
+                                <a href="forgot_password.php">Esqueceu a senha?</a>
                                 <a href="register.php">Cadastrar-se?</a>
                             </div>
                         </div>
