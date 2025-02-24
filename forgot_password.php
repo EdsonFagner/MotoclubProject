@@ -1,30 +1,38 @@
 <?php
 include 'conection.php';
 
+//Consulta no banco de dados
 $codeConsultaAll = "SELECT * FROM code_table";
 $consultaAll = $mysqli->query($codeConsultaAll) or die ($mysqli->error);
 $consultAllResult = $consultaAll->fetch_all();
 
+//Consulta no banco de dados
 $codeConsultaAll2 = "SELECT * FROM acess_login";
 $consultaAll2 = $mysqli->query($codeConsultaAll2) or die ($mysqli->error);
 $consultAllResult2 = $consultaAll2->fetch_all();
 
+//Consulta no banco de dados
 $codeConsultaAll3 = "SELECT * FROM monthly_fee";
 $consultaAll3 = $mysqli->query($codeConsultaAll3) or die ($mysqli->error);
 $consultAllResult3 = $consultaAll3->fetch_all();
 
+//Consulta no banco de dados
 $codeConsultaAll4 = "SELECT * FROM register";
 $consultaAll4 = $mysqli->query($codeConsultaAll4) or die ($mysqli->error);
 $consultAllResult4 = $consultaAll4->fetch_all();
 
+//Função de alerta
 function alert($msg) {
     echo "<script type='text/javascript'>alert('$msg');</script>";
 }
 
+//Função para atualizar senha
 function updatePassword($arrayLength2, $arrayLength4, $code, $password2, $criptUser, $mysqli) {
 
+    //Criptografia de senha e armazenamento em variável
     $criptPassword = password_hash($password2, PASSWORD_DEFAULT);
 
+    //Atualização de senha no banco de dados no registro de usuário
     for($x = 0; $x < count($arrayLength4); $x++){
         if($code == $arrayLength4[$x][4]){
             $codeThirdUpdate = "UPDATE register SET password = '$criptPassword' WHERE code = '$code'";
@@ -32,6 +40,7 @@ function updatePassword($arrayLength2, $arrayLength4, $code, $password2, $criptU
         }   
     }
 
+    //Atualização de senha no banco de dados no registro de login
     for($x = 0; $x < count($arrayLength2); $x++){
         if($criptUser == $arrayLength2[$x][1]){
             $codeFourthUpdate = "UPDATE acess_login SET password = '$criptPassword' WHERE user = '$criptUser'";
@@ -44,17 +53,21 @@ function updatePassword($arrayLength2, $arrayLength4, $code, $password2, $criptU
 
 }
 
+//Verificar se o botão de atualização de senha foi clicado para atualizar senha
 if(isset($_POST['buttonUpdatePassword'])){
 
+    //Captura de dados do formulário
     $code = htmlspecialchars($_POST['code']);
     $password2 = htmlspecialchars($_POST['password2']);
     $countInvalid = 0;
 
+    //Contador para verificar se o código é válido
     for($x = 0; $x < count($consultAllResult); $x++){
         if($code == $consultAllResult[$x][2]){
 
             $criptUser = $consultAllResult2[$x][1];
-
+            
+            //Chamada da função de atualização de senha
             updatePassword($consultAllResult2, $consultAllResult4, $code, $password2, $criptUser, $mysqli);
         }else{
             $countInvalid += 1;

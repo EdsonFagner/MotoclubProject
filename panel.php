@@ -2,36 +2,44 @@
 session_start();
 include 'conection.php';
 
+//Consulta no banco de dados
 $codeConsultaAll = "SELECT * FROM code_table";
 $consultaAll = $mysqli->query($codeConsultaAll) or die ($mysqli->error);
 $consultAllResult = $consultaAll->fetch_all();
 
+//Consulta no banco de dados
 $codeConsultaAll2 = "SELECT * FROM acess_login";
 $consultaAll2 = $mysqli->query($codeConsultaAll2) or die ($mysqli->error);
 $consultAllResult2 = $consultaAll2->fetch_all();
 
+//Consulta no banco de dados
 $codeConsultaAll3 = "SELECT * FROM monthly_fee";
 $consultaAll3 = $mysqli->query($codeConsultaAll3) or die ($mysqli->error);
 $consultAllResult3 = $consultaAll3->fetch_all();
 
+//Consulta no banco de dados
 $codeConsultaAll4 = "SELECT * FROM register";
 $consultaAll4 = $mysqli->query($codeConsultaAll4) or die ($mysqli->error);
 $consultAllResult4 = $consultaAll4->fetch_all();
 
+//Variável de caracteres permitidos para gerar código
 $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 $login = $_SESSION['login'];
 
+//Função de alerta
 function alert($msg) {
     echo "<script type='text/javascript'>alert('$msg');</script>";
 }
 
+//Verificação de autenticação para redirecionamento caso não esteja autenticado
 if($_SESSION['login'] != password_verify($login, $consultAllResult2[0][1])){
     alert('Usuário sem permissão');
     echo "<script type='text/javascript'> document.location = 'index.php'; </script>";  
     exit(); 
 }
 
+//Função para criar códigos
 function generate_string($input, $strength = 16) {
     $input_length = strlen($input);
     $random_string = '';
@@ -42,14 +50,20 @@ function generate_string($input, $strength = 16) {
     return $random_string;
 }
 
+//Verificar se o botão de gerar código foi clicado para gerar código
 if(isset($_POST['buttonGenerate'])){
+    //Variável para armazenar código gerado
     $codeGen = generate_string($permitted_chars, 5);
+    //Conversão de código gerado para maiúsculo
     $codeGen = strtoupper($codeGen);
+    //Captura de nome do formulário com tratamento de caracteres especiais
     $nameCode = htmlspecialchars($_POST['nameCode']);
     $countInvalidCode = null;
 
+    //Verificar se o código gearado é diferente de vazio
     if(!empty($codeGen)){
         for($x=0; $x < count($consultAllResult); $x++){
+            //Verificação de código já utilizado
             if($codeGen == $consultAllResult[$x][2]){
                 alert('FALHA, O CÓDIGO GERADO É IGUAL HÁ UM JÁ CADASTRADO.');
                 break;
@@ -57,6 +71,7 @@ if(isset($_POST['buttonGenerate'])){
                 $countInvalidCode += 1;
             }
         }
+        //Verificação de código válido para inclusão de dados no banco de dados
         if($countInvalidCode == count($consultAllResult)){
             $codeFirstInclude = "INSERT INTO code_table (name, code) VALUES ('$nameCode', '$codeGen')";
             $mysqli->query($codeFirstInclude) or die ($mysqli->error);
@@ -64,6 +79,7 @@ if(isset($_POST['buttonGenerate'])){
             $mysqli->query($codeSecondInclude) or die ($mysqli->error);
             $codeSecondConsult = "SELECT * FROM code_table WHERE code = '$codeGen'";
             $secondConsult = $mysqli->query($codeSecondConsult) or die ($mysqli->error);
+            //Verificação de inclusão de dados no banco de dados
             if(!empty($secondConsult)){
                 alert('INSERÇÃO SUCEDIDA!');
                 echo "<script type='text/javascript'> document.location = 'codeList.php'; </script>";
@@ -74,6 +90,7 @@ if(isset($_POST['buttonGenerate'])){
     }
 }
 
+//Verificar se o botão de exclusão foi clicado para excluir código
 if(isset($_POST['buttonExclude'])){
     $codeExclude = htmlspecialchars($_POST['code']);
     $codeExclude = strtoupper($codeExclude);

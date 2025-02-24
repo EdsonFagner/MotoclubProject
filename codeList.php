@@ -2,28 +2,32 @@
 session_start();
 include 'conection.php';
 
+//Consulta no banco de dados
 $codeConsultaAll = "SELECT * FROM code_table";
 $consultaAll = $mysqli->query($codeConsultaAll) or die ($mysqli->error);
 $consultAllResult = $consultaAll->fetch_all();
 
+//Consulta no banco de dados
 $codeConsultaAll2 = "SELECT * FROM acess_login";
 $consultaAll2 = $mysqli->query($codeConsultaAll2) or die ($mysqli->error);
 $consultAllResult2 = $consultaAll2->fetch_all();
 
 $login = $_SESSION['login'];
 
+//Verificação de autenticação para redirecionamento caso não esteja autenticado
 if($_SESSION['login'] != password_verify($login, $consultAllResult2[0][1])){
     alert('Usuário sem permissão');
     echo "<script type='text/javascript'> document.location = 'index.php'; </script>";  
     exit(); 
 }
 
+//Função de alerta
 function alert($msg) {
     echo "<script type='text/javascript'>alert('$msg');</script>";
 }
 
 
-
+    //Função para criar tabela de códigos
     function tableCreate($arrayLength){
         
         for($x = 0; $x < count($arrayLength); $x++){

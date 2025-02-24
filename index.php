@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+//Verificar se a sessão de login está ativa para ocultar botão de login e exibir botão de mensalidades
 if(!empty($_SESSION['login'])){
    echo "<script type='module'>document.querySelector('.buttonLoginNav').style.display = 'none';</script>";
    echo "<script type='module'>document.querySelector('#monthlyLink').style.display = 'flex';</script>";

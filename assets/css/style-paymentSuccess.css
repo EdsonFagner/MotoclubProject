@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+li button {
+    display: none !important;
+}
+
+body {
+    font-size: 13px;
+    overflow-x: hidden;
+    font-family: "Chivo", serif;
+    font-optical-sizing: auto;
+    background-color: black;
+}
+
+.section-title h1 {
+    font-style: italic;
+    color: green;
+}
+
+.section-body img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.section-body h5 {
+    font-style: italic;
+    color: white;
+}
+
+.contador {
+    color: white;
+}

@@ -50,3 +50,15 @@ body {
     width: 200px;
 
 }
+
+.alignButton {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-table {
+    display: none;
+    max-width: 100px;
+    justify-content: center;
+}
+
