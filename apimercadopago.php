@@ -15,7 +15,7 @@
     use MercadoPago\Client\Preference\PreferenceClient;
     
     //Configuração do MercadoPago para ambiente local de teste
-    MercadoPagoConfig::setAccessToken('TEST-7092785592985182-021602-0143779e2a18b5c9454e665d17d90908-218277692');
+    MercadoPagoConfig::setAccessToken('YOUR-TOKEN');
     MercadoPagoConfig::setRuntimeEnviroment(MercadoPagoConfig::LOCAL);
 
     //Variável para definir caracters permitidos na geração do código de pagamento
@@ -58,15 +58,15 @@
             ]
         ],
         'payer' => [
-            'name' => 'Edson',
-            'surname' => 'Cardoso',
-            'email' => 'jogosteste15@gmail.com',
+            'name' => 'Name User',
+            'surname' => 'Surname User',
+            'email' => 'E-mail User',
         ],
         'marketplace_fee' => 0.00,
         'back_urls' => [
-            'success' => 'http://localhost/MotoclubProject/paymentSuccess.php'.$paymentURL,
-            'failure' => 'http://localhost/MotoclubProject/paymentFail.php',
-            'pending' => 'http://localhost/MotoclubProject/paymentPending.php',
+            'success' => 'YOUR-BACK-SUCCESS-URL'.$paymentURL,
+            'failure' => 'YOUR-FAIL-URL',
+            'pending' => 'YOUR-PENDING-URL',
         ],
         "auto_return" => "all",
         "external_reference" => "1643827245",
